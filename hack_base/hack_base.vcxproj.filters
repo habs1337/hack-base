@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="includes\inline\inline.h" />
+    <ClInclude Include="hack_includes.h" />
+    <ClInclude Include="engine\offset\offset.h" />
+    <ClInclude Include="engine\modules\modules.h" />
+    <ClInclude Include="engine\hooks\declaration\hooks.h" />
+    <ClInclude Include="engine\setup\engine.h" />
+    <ClInclude Include="engine\console\console.h" />
+    <ClInclude Include="engine\settings\settings.h" />
+    <ClInclude Include="engine\sdk\sdk.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main\Main.cpp" />
+    <ClCompile Include="engine\offset\offset.cpp" />
+    <ClCompile Include="engine\modules\modules.cpp" />
+    <ClCompile Include="engine\hooks\declaration\hooks.cpp" />
+    <ClCompile Include="engine\setup\engine.cpp" />
+    <ClCompile Include="engine\console\console.cpp" />
+    <ClCompile Include="engine\settings\settings.cpp" />
+    <ClCompile Include="engine\hooks\functions\wnd_proc.cpp" />
+    <ClCompile Include="engine\sdk\sdk.cpp" />
+    <ClCompile Include="engine\hooks\functions\reset.cpp" />
+    <ClCompile Include="engine\hooks\functions\present.cpp" />
+    <ClCompile Include="engine\hooks\functions\end_scene.cpp" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hack_base", "hack_base\hack_base.vcxproj", "{350B64D0-808F-4746-A606-73F6C28CF14D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		debug_crt|x64 = debug_crt|x64
+		debug_crt|x86 = debug_crt|x86
+		debug_non_crt|x64 = debug_non_crt|x64
+		debug_non_crt|x86 = debug_non_crt|x86
+		release_crt|x64 = release_crt|x64
+		release_crt|x86 = release_crt|x86
+		release_non_crt|x64 = release_non_crt|x64
+		release_non_crt|x86 = release_non_crt|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{350B64D0-808F-4746-A606-73F6C28CF14D}.debug_crt|x64.ActiveCfg = debug_crt|x64
+		{350B64D0-808F-4746-A606-73F6C28CF14D}.debug_crt|x64.Build.0 = debug_crt|x64
+		{350B64D0-808F-4746-A606-73F6C28CF14D}.debug_crt|x86.ActiveCfg = debug_crt|Win32
+		{350B64D0-808F-4746-A606-73F6C28CF14D}.debug_crt|x86.Build.0 = debug_crt|Win32
+		{350B64D0-808F-4746-A606-73F6C28CF14D}.debug_non_crt|x64.ActiveCfg = debug_non_crt|x64
+		{350B64D0-808F-4746-A606-73F6C28CF14D}.debug_non_crt|x64.Build.0 = debug_non_crt|x64
+		{350B64D0-808F-4746-A606-73F6C28CF14D}.debug_non_crt|x86.ActiveCfg = debug_non_crt|Win32
+		{350B64D0-808F-4746-A606-73F6C28CF14D}.debug_non_crt|x86.Build.0 = debug_non_crt|Win32
+		{350B64D0-808F-4746-A606-73F6C28CF14D}.release_crt|x64.ActiveCfg = release_crt|x64
+		{350B64D0-808F-4746-A606-73F6C28CF14D}.release_crt|x64.Build.0 = release_crt|x64
+		{350B64D0-808F-4746-A606-73F6C28CF14D}.release_crt|x86.ActiveCfg = release_crt|Win32
+		{350B64D0-808F-4746-A606-73F6C28CF14D}.release_crt|x86.Build.0 = release_crt|Win32
+		{350B64D0-808F-4746-A606-73F6C28CF14D}.release_non_crt|x64.ActiveCfg = release_non_crt|x64
+		{350B64D0-808F-4746-A606-73F6C28CF14D}.release_non_crt|x64.Build.0 = release_non_crt|x64
+		{350B64D0-808F-4746-A606-73F6C28CF14D}.release_non_crt|x86.ActiveCfg = release_non_crt|Win32
+		{350B64D0-808F-4746-A606-73F6C28CF14D}.release_non_crt|x86.Build.0 = release_non_crt|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5943616-6716-400D-9BED-7E9089676BDF}
+	EndGlobalSection
+EndGlobal
