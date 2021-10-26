@@ -1,6 +1,10 @@
 #pragma once
 //inline meme
 #include "includes/inline/inline.h" 
+
+#ifdef CRT
+#define CUSTOM_MINI_CRT_DISABLED
+#endif
 //lib
 #include <includes/includes.h> 
 

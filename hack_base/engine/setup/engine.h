@@ -19,6 +19,7 @@ public:
 	bool initialize();
 
 	void hook_functions();
+	void unhook_functions();
 };
 
 extern c_engine g_engine;
