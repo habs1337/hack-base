@@ -13,9 +13,10 @@ void main_thread() {
 
 	g_engine.m_console.disable();
 	g_engine.unhook_functions();
+	g_cheat::memory::exception_manager::on_stop();
+
 	g_thread_manager.delete_threads();
 
-	g_cheat::memory::exception_manager::on_stop();
 }
 #endif
 
