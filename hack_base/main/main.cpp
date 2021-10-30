@@ -11,7 +11,9 @@ void main_thread() {
 	while (!GetAsyncKeyState(VK_DELETE))
 		Sleep(100);
 
+#ifndef SELL_BUILD
 	g_engine.m_console.disable();
+#endif
 	g_engine.unhook_functions();
 	g_cheat::memory::exception_manager::on_stop();
 

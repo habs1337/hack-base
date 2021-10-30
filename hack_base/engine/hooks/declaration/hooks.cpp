@@ -1,9 +1,5 @@
 #include "../../../hack_includes.h"
 
-
-//Spoof Return Address
-PVOID ReturnAddressStubEnc = 0;
-
 c_table::c_table() {
 	m_table_ptr = nullptr;
 	m_valid = false;
@@ -39,9 +35,10 @@ bool c_hook_manager::initialize(c_offset& offsets) {
 #ifndef SELL_BUILD
 #ifdef CRT
 	printf("hook tables:\n");	
+#else
+	g_mini_crt::string::debug_text("hook tables", 0);
+	g_mini_crt::string::debug_integer("device:", static_cast<uintptr_t>(this->m_device.m_valid), 16, 0);
 #endif
-	g_mini_crt::string::debug_text("hook tables");
-	g_mini_crt::string::debug_text("device:", static_cast<uintptr_t>(this->m_device.m_valid), 10);
 #endif
 
 	if (!this->m_device.m_valid) {

@@ -6,16 +6,22 @@
 #ifdef CRT
 
 bool c_console::initialize() {
-	AllocConsole();
-	freopen_s(&m_write_stream, "con", "w", stdout);
+	m_is_opened_console = AllocConsole();
+	if (m_is_opened_console) {
+		freopen_s(&m_write_stream, "con", "w", stdout);
+		return true;
+	}
 
-	return true;
+	return false;
 }
 
 bool c_console::disable() {
-	fclose(m_write_stream);
-	FreeConsole();
+	if (m_is_opened_console) {
+		fclose(m_write_stream);
+		FreeConsole();
+		return true;
+	}
 
-	return true;
+	return false;
 }
 #endif

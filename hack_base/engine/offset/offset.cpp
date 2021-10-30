@@ -9,10 +9,11 @@ bool c_offset::initialize(c_modules& modules) {
 #ifndef SELL_BUILD
 #ifdef CRT
 	printf("interfaces:\n");
+#else
+	g_mini_crt::string::debug_text("interfaces:", 0);
+	g_mini_crt::string::debug_integer("m_hwnd:", this->m_hwnd, 16, 0);
+	g_mini_crt::string::debug_integer("device_table:", this->m_device_table, 16, 0);
 #endif
-	g_mini_crt::string::debug_text("interfaces:");
-	g_mini_crt::string::debug_text("m_hwnd:", this->m_hwnd, 16);
-	g_mini_crt::string::debug_text("device_table:", this->m_device_table, 16);
 #endif
 
 	if (!this->m_hwnd.is_valid() || !this->m_device_table.is_valid()) {

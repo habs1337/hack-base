@@ -2,12 +2,12 @@
 
 bool c_sdk::initialize(c_offset& offsets) {
 
-
-
 #ifndef SELL_BUILD
 #ifdef CRT
 	printf("sdk:\n");
 
+#else
+	g_mini_crt::string::debug_text("sdk:", 0);
 #endif
 #endif
 
