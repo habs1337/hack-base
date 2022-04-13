@@ -10,6 +10,7 @@
     <ClInclude Include="engine\console\console.h" />
     <ClInclude Include="engine\settings\settings.h" />
     <ClInclude Include="engine\sdk\sdk.h" />
+    <ClInclude Include="exception_manager\exception_manager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main\Main.cpp" />
@@ -24,5 +25,6 @@
     <ClCompile Include="engine\hooks\functions\reset.cpp" />
     <ClCompile Include="engine\hooks\functions\present.cpp" />
     <ClCompile Include="engine\hooks\functions\end_scene.cpp" />
+    <ClCompile Include="exception_manager\exception_manager.cpp" />
   </ItemGroup>
 </Project>

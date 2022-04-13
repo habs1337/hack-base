@@ -9,15 +9,17 @@
 #include <includes/includes.h> 
 
 #ifdef CRT
+
 #include <iostream>
-#include <string>
-#include <d3d11.h>
+//#include <d3d11.h>
 #include <ShlObj.h>
 
 #include <cmath>
 #include <algorithm>
 #include <vector>
+#include <fstream> 
 
+#include "exception_manager/exception_manager.h"
 #endif
 
 #include <D3D9Types.h>

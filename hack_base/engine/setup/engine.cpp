@@ -29,27 +29,27 @@ bool c_engine::initialize() {
 		return false;
 	}
 	
+	if (!this->m_sdk.initialize(this->m_offsets)) {
+		return false;
+	}
 
 	if (!this->m_hook_manager.initialize(this->m_offsets)) {
 		return false;
 	}
 
-	if (!this->m_sdk.initialize(this->m_offsets)) {
-		return false;
-	}
 
 	return true;
 }
 
 void c_engine::hook_functions() {
-	hooks::original_wnd_proc = this->m_offsets.m_virtual_caller.call_spoofed_function<WNDPROC>(SetWindowLongPtrA, this->m_offsets.m_hwnd.as<HWND>(), GWLP_WNDPROC, reinterpret_cast<LONG_PTR>(hooks::functions::hk_wnd_proc));
+	//hooks::original_wnd_proc = this->m_offsets.m_sdk.m_virtual_caller.call_spoofed_function<WNDPROC>(SetWindowLongPtrA, this->m_offsets.m_virtual_table.m_window_descriptor.as<HWND>(), GWLP_WNDPROC, reinterpret_cast<LONG_PTR>(hooks::functions::hk_wnd_proc));
 	this->m_hook_manager.m_device.m_hook.setup_hook(hooks::indexes::RESET, g_cheat::memory::hooks::c_vmt::force_cast(&hooks::functions::hk_reset));
 	this->m_hook_manager.m_device.m_hook.setup_hook(hooks::indexes::PRESENT, g_cheat::memory::hooks::c_vmt::force_cast(&hooks::functions::hk_present));
 	this->m_hook_manager.m_device.m_hook.setup_hook(hooks::indexes::END_SCENE, g_cheat::memory::hooks::c_vmt::force_cast(&hooks::functions::hk_end_scene));
 }
 
 void c_engine::unhook_functions() {
-	this->m_offsets.m_virtual_caller.call_spoofed_function<WNDPROC>(SetWindowLongPtrA, this->m_offsets.m_hwnd.as<HWND>(), GWLP_WNDPROC, reinterpret_cast<LONG_PTR>(hooks::original_wnd_proc));
+	//this->m_offsets.m_sdk.m_virtual_caller.call_spoofed_function<WNDPROC>(SetWindowLongPtrA, this->m_offsets.m_virtual_table.m_window_descriptor.as<HWND>(), GWLP_WNDPROC, reinterpret_cast<LONG_PTR>(hooks::original_wnd_proc));
 	this->m_hook_manager.m_device.m_hook.disable_hook(hooks::indexes::RESET);
 	this->m_hook_manager.m_device.m_hook.disable_hook(hooks::indexes::PRESENT);
 	this->m_hook_manager.m_device.m_hook.disable_hook(hooks::indexes::END_SCENE);

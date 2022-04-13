@@ -30,7 +30,7 @@ bool c_table::initialize() {
 
 bool c_hook_manager::initialize(c_offset& offsets) {
 
-	this->m_device = c_table(offsets.m_device_table);
+	this->m_device = c_table(offsets.m_virtual_table.m_device_table);
 
 #ifndef SELL_BUILD
 #ifdef CRT

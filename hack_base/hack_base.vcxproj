@@ -407,6 +407,7 @@
     <ClCompile Include="engine\sdk\sdk.cpp" />
     <ClCompile Include="engine\settings\settings.cpp" />
     <ClCompile Include="engine\setup\engine.cpp" />
+    <ClCompile Include="exception_manager\exception_manager.cpp" />
     <ClCompile Include="main\Main.cpp" />
     <ClCompile Include="engine\offset\offset.cpp" />
   </ItemGroup>
@@ -417,6 +418,7 @@
     <ClInclude Include="engine\sdk\sdk.h" />
     <ClInclude Include="engine\settings\settings.h" />
     <ClInclude Include="engine\setup\engine.h" />
+    <ClInclude Include="exception_manager\exception_manager.h" />
     <ClInclude Include="hack_includes.h" />
     <ClInclude Include="includes\inline\inline.h" />
     <ClInclude Include="engine\offset\offset.h" />

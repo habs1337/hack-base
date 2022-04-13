@@ -7,5 +7,6 @@ void* hooks::functions::hk_end_scene(LPDIRECT3DDEVICE9* device) {
         (hooks::indexes::END_SCENE);
 
     
-    return g_engine.m_offsets.m_virtual_caller.call_spoofed_function<void*>(end_scene_original, device);
+    //return g_engine.m_offsets.m_sdk.m_virtual_caller.call_spoofed_function<void*>(end_scene_original, device);
+    return 0;
 }
